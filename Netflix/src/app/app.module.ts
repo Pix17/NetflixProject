@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainHomepageComponent } from './homepage/main-homepage/main-homepage.component';
 import { MainLoginComponent } from './login/main-login/main-login.component';
+import { FooterComponent } from './homepage/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainHomepageComponent,
-    MainLoginComponent
+    MainLoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
