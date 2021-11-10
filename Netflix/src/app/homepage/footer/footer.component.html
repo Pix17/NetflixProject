@@ -1,1 +1,36 @@
-<p>footer works!</p>
+<section>
+  <p id="Ptele-number" class="text-left">Domande? Chiama <a href="#">800-130-364</a></p>
+  <div class="d-flex">
+    <ul>
+      <li *ngFor="let link of column1">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let link of column2">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let link of column3">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let link of column4">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
