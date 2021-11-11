@@ -10,6 +10,10 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainHomepageComponent } from './homepage/main-homepage/main-homepage.component';
 import { MainLoginComponent } from './login/main-login/main-login.component';
+import { ServiceComponent } from './homepage/service/service.component';
+import { ServiceContentComponent } from './homepage/service-content/service-content.component';
+import { ServiceMediaComponent } from './homepage/service-media/service-media.component';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FooterComponent } from './homepage/footer/footer.component';
@@ -19,13 +23,14 @@ import { FooterComponent } from './homepage/footer/footer.component';
     AppComponent,
     MainHomepageComponent,
     MainLoginComponent,
+    ServiceComponent,
+    ServiceContentComponent,
+    ServiceMediaComponent
     AboveTheFoldComponent,
     HeadlineComponent,
     LanguageButtonComponent,
     LogoComponent,
-    MainSubscribeComponent
-    
-
+    MainSubscribeComponent,
     FooterComponent
   ],
   imports: [
