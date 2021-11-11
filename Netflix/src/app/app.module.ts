@@ -12,6 +12,8 @@ import { MainHomepageComponent } from './homepage/main-homepage/main-homepage.co
 import { MainLoginComponent } from './login/main-login/main-login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { FooterComponent } from './homepage/footer/footer.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LogoComponent,
     MainSubscribeComponent
     
+
+    FooterComponent
   ],
   imports: [
     BrowserModule,
