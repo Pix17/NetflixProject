@@ -17,6 +17,7 @@ import { ServiceMediaComponent } from './homepage/service-media/service-media.co
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FooterComponent } from './homepage/footer/footer.component';
+import { FaqComponent } from './homepage/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,14 @@ import { FooterComponent } from './homepage/footer/footer.component';
     MainLoginComponent,
     ServiceComponent,
     ServiceContentComponent,
-    ServiceMediaComponent
+    ServiceMediaComponent,
     AboveTheFoldComponent,
     HeadlineComponent,
     LanguageButtonComponent,
     LogoComponent,
     MainSubscribeComponent,
-    FooterComponent
+    FooterComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
