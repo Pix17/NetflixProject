@@ -25,7 +25,7 @@ import { FooterComponent } from './homepage/footer/footer.component';
     MainLoginComponent,
     ServiceComponent,
     ServiceContentComponent,
-    ServiceMediaComponent
+    ServiceMediaComponent,
     AboveTheFoldComponent,
     HeadlineComponent,
     LanguageButtonComponent,
