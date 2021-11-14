@@ -1,4 +1,29 @@
+/* Custom style
+.accordion-button::after {
+    background-color: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+    transform: scale(.7) !important;
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  }
 
+
+
+  .collapse {
+    transform: rotate(-90deg);
+   }
+
+ */
+
+ 
+.svg-2 {
+    height: 1em;
+    color: white;
+    transform: rotate(-45deg);
+    margin: auto 0;
+    padding: 0;
+}
+   
 
 p {
     color: white;
@@ -10,7 +35,10 @@ p {
 
 #faq-main-container{
     background-color: black;
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
     
    
 }
@@ -18,13 +46,25 @@ p {
 
 
 h1 {
+    font-size: 3.125rem;
     color: white;
     text-align: center;
+    margin-bottom: 40px;
 }
 
+//IMPORTANTE 
 .titoloecroce{
+   
     display: flex;
     justify-content: space-between;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 10px;
+    //background-color: red;
+    
+
 }
 
 
@@ -76,24 +116,41 @@ h1 {
         justify-content: left;
         
  
-    }   
+       }   
 
+
+       // *** IMPORTANTE NON CAMBIARE BORDO ***** 
+       .btn{
+           border: 0;
+           padding: 0;
+
+       }
+
+    //NON ATTIVARE
+
+    /*
     .collapsed{
-        border-width: 0ch;
+        border-width: 0;
+        background-color: yellow;
+        
     }
-    
-
+    */
+ 
 
   
       .card-header {
-        // padding-top: 0;
+       // padding-top: 10;
        
         
     
-  
+  //   ******** IMPORTANTE NON CAMBIARE MAI IL PADDING BOTTONE ************
         button {
-          padding: 0.5rem;
+          padding: 0;
           width: 100%;
+         
+          
+
+
                
             
           span {
@@ -117,4 +174,23 @@ h1 {
     }
     
   }
+
+  #faq-p-and-main-subscribe-container {
+      margin-top: 60px;
+  }
+
+  #faq-p-and-main-subscribe-container p {
+    text-align: center;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#faq-main-subscribe-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
 

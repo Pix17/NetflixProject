@@ -6,9 +6,17 @@
 
 
     
-    <ngb-accordion [destroyOnHide]='false' [closeOthers]="true" activeIds="">
+    <ngb-accordion [destroyOnHide]='false' [closeOthers]="true" activeIds="" data-toggle="collapse" >
+
+
+
         <ngb-panel id="static-1">
-        <ng-template ngbPanelTitle> <div class="titoloecroce">Cos'è Netflix? <div id="croce">+</div> </div></ng-template>
+        <ng-template  ngbPanelTitle > 
+            <div class="titoloecroce" (click)="expand1()"> Cos'è Netflix?
+            
+            
+                <svg [ngStyle]="{'transform': isExpanded1 === true ? 'rotate(-45deg)' : 'rotate(0deg)' }" id="thin-x" viewBox="0 0 26 26" class="svg-2" focusable="true"><path fill="white" d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+              </div> </ng-template>
           <ng-template ngbPanelContent>
             <p>
                 Netflix è un servizio di streaming che offre una varietà di serie TV, film, documentari pluripremiati e tanto altro su una vasta 
@@ -27,9 +35,17 @@
 
 
 
+
+
+
+
         <ngb-panel id="static-2">
-          <ng-template ngbPanelTitle> <div class="titoloecroce">Quanto costa Netflix? <div id="croce">+</div> </div></ng-template>
-          <ng-template ngbPanelContent>
+            <ng-template ngbPanelTitle><div class="titoloecroce" (click)="expand2()">Quanto costa Netflix?
+                
+                <svg [ngStyle]="{'transform': isExpanded2 === true ? 'rotate(-45deg)' : 'rotate(0deg)' }" id="thin-x" viewBox="0 0 26 26" class="svg-2" focusable="true"><path fill="white" d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+
+                 </div> </ng-template>
+            <ng-template ngbPanelContent>
             Guarda Netflix su smartphone, tablet, Smart TV, laptop o dispositivi per lo streaming, il tutto per un importo mensile fisso. 
             Piani da 7,99 € a 17,99 € al mese. Nessun costo aggiuntivo, nessun contratto.           
           </ng-template>
@@ -38,8 +54,17 @@
 
 
 
+
+
+
+
         <ngb-panel id="static-3">
-        <ng-template ngbPanelTitle> <div class="titoloecroce">Dove posso guardare Netflix? <div id="croce">+</div> </div></ng-template>
+        <ng-template ngbPanelTitle> <div class="titoloecroce" (click)="expand3()">Dove posso guardare Netflix? 
+
+            <svg [ngStyle]="{'transform': isExpanded3 === true ? 'rotate(-45deg)' : 'rotate(0deg)' }" id="thin-x" viewBox="0 0 26 26" class="svg-2" focusable="true"><path fill="white" d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+
+            
+            </div> </ng-template>
 
           <ng-template ngbPanelContent>
             <p>Guarda Netflix dove vuoi, quando vuoi. Accedi al tuo account per guardare subito Netflix dal tuo computer su netflix.com 
@@ -53,8 +78,18 @@
         </ngb-panel>
 
 
+
+
+
+
+
         <ngb-panel id="static-4" title="">
-        <ng-template ngbPanelTitle> <div class="titoloecroce">Come posso disdire? <div id="croce">+</div> </div></ng-template>
+            <ng-template ngbPanelTitle> <div class="titoloecroce" (click)="expand4()">Come posso disdire? 
+
+                <svg [ngStyle]="{'transform': isExpanded4 === true ? 'rotate(-45deg)' : 'rotate(0deg)' }" id="thin-x" viewBox="0 0 26 26" class="svg-2" focusable="true"><path fill="white" d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+
+                
+            </div> </ng-template>
 
             <ng-template ngbPanelContent>
                 Netflix è flessibile. Nessun contratto fastidioso e nessun impegno. 
@@ -65,9 +100,16 @@
 
 
 
+
+
+
         
           <ngb-panel id="static-5">
-            <ng-template ngbPanelTitle> <div class="titoloecroce">Cosa posso guardare su Netflix? <div id="croce">+</div> </div></ng-template>
+            <ng-template ngbPanelTitle> <div class="titoloecroce" (click)="expand5()">Cosa posso guardare su Netflix? 
+                
+                <svg [ngStyle]="{'transform': isExpanded5 === true ? 'rotate(-45deg)' : 'rotate(0deg)' }" id="thin-x" viewBox="0 0 26 26" class="svg-2" focusable="true"><path fill="white" d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+
+            </div> </ng-template>
             <ng-template ngbPanelContent>
                 Netflix ha un nutrito catalogo di lungometraggi, documentari, serie TV, anime, originali Netflix pluripremiati e tanto altro.
                  Guarda tutto quello che vuoi, in qualsiasi momento.
@@ -75,8 +117,17 @@
           </ngb-panel>
 
 
+
+
+
+
           <ngb-panel id="static-6">
-            <ng-template ngbPanelTitle> <div class="titoloecroce">Netflix è adatto ai bambini? <div id="croce">+</div> </div></ng-template>
+            <ng-template ngbPanelTitle> <div class="titoloecroce" (click)="expand6()">Netflix è adatto ai bambini? 
+
+                <svg [ngStyle]="{'transform': isExpanded6 === true ? 'rotate(-45deg)' : 'rotate(0deg)' }" id="thin-x" viewBox="0 0 26 26" class="svg-2" focusable="true"><path fill="white" d="M10.5 9.3L1.8 0.5 0.5 1.8 9.3 10.5 0.5 19.3 1.8 20.5 10.5 11.8 19.3 20.5 20.5 19.3 11.8 10.5 20.5 1.8 19.3 0.5 10.5 9.3Z"></path></svg>
+
+                
+              </div> </ng-template>
 
             <ng-template ngbPanelContent>
                 <p>L'area Netflix Bambini, già inclusa nell'abbonamento, offre ai genitori un maggiore controllo sui contenuti e 
@@ -92,6 +143,15 @@
 
 
       </ngb-accordion>
+
+      <div id="faq-p-and-main-subscribe-container">
+        <p>Vuoi guardare Netflix? Inserisci l'indirizzo email per abbonarti o riattivare il tuo abbonamento.</p>
+        <div id="faq-main-subscribe-container"><main-subscribe></main-subscribe></div>
+      </div>
+      
+   
+      
+      
 </div>
 
 
