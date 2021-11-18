@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ILink } from 'src/app/models/footer-interface';
+import { ILink } from '@models/footer-interface';
 
 @Component({
   selector: 'footer',

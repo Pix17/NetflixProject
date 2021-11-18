@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { IService } from 'src/app/models/interfaces';
+import { IService } from '@models/interfaces';
 
 @Component({
   selector: 'service-media',
