@@ -4,12 +4,14 @@ video{
     top: -24rem;
     left: 5rem;
 }
-video::last-child{
-    top: -27rem;
-    left: 6rem;
-    
-}
+
 img[alt="image"]{
     position: relative;
     z-index: 1;
+}
+
+.littleVideo{
+    top: -27rem;
+    left: 7rem;
+    width: 25rem;
 }
