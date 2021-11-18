@@ -16,10 +16,6 @@ export class FaqComponent implements OnInit {
   
   faPlus = faPlus;
 
-  croce:string = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
-
-  croceGirata:string = 'p';
-
   isExpanded1 = true;
   count1: number = 0;
 
