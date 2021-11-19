@@ -45,13 +45,15 @@ h1 {
     border-color: rgba(255, 255, 255, 0);
     border-width: 10px;
     //background-color: red;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    font-weight: 300;
     
 
 }
 
 
 
-// scheda toggle
+// scheda
 ::ng-deep .collapse {
     transition: max-height 0ms;
     
@@ -107,33 +109,20 @@ h1 {
            padding: 0;
 
        }
-
-    //NON ATTIVARE
-
-    /*
-    .collapsed{
-        border-width: 0;
-        background-color: yellow;
-        
-    }
-    */
- 
-
+    
   
       .card-header {
-       // padding-top: 10;
+       padding-top: 10;
        
         
     
-  //   ******** IMPORTANTE NON CAMBIARE MAI IL PADDING BOTTONE ************
+  //   ******** IMPORTANTE NON CAMBIARE MAI IL PADDING BOTTONE **********
         button {
           padding: 0;
           width: 100%;
          
           
-
-
-               
+             
             
           span {
             float: left;
