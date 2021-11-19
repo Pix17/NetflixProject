@@ -1,0 +1,33 @@
+<section class="d-flex flex-column align-items-center">
+  <div class="w-50">
+    <p id="Ptele-number" class="text-left">Domande? Chiama <a href="#">800-130-364</a></p>
+  </div>
+  <div class="d-flex justify-content-evenly w-50">
+    <ul>
+      <li *ngFor="let link of col1">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let link of col2">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let link of col3">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let link of col4">
+        <a [href]="link.url">{{ link.label }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="w-50">
+    <language-button></language-button>
+    <p><small>Netflix Italia</small></p>
+  </div>
+</section>
+
+

@@ -1,0 +1,26 @@
+<section>
+  <img src="{{ item.media }}" alt="image" />
+
+  <video
+    *ngIf="
+      item.video ===
+      'https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v'
+    "
+    src="{{ item.video }}"
+    type="video/mp4"
+    autoplay
+    loop
+  ></video>
+
+  <video
+  *ngIf="
+    item.video ===
+    'https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v'
+  "
+  src="{{ item.video }}"
+  type="video/mp4"
+  autoplay
+  loop
+  class="littleVideo"
+></video>
+</section>
