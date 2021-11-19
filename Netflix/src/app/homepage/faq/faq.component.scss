@@ -1,0 +1,167 @@
+.svg-2 {
+    height: 1em;
+    color: white;
+    transform: rotate(-45deg);
+    margin: auto 0;
+    padding: 0;
+}
+   
+
+p {
+    color: white;
+    
+    
+}
+
+
+
+#faq-main-container{
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    
+   
+}
+
+
+
+h1 {
+    font-size: 3.125rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+//IMPORTANTE 
+.titoloecroce{
+   
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 10px;
+    //background-color: red;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+    font-weight: 300;
+    
+
+}
+
+
+
+// scheda
+::ng-deep .collapse {
+    transition: max-height 0ms;
+    
+    max-height: 0;
+    opacity: 0;
+    display: block !important;
+
+    
+    
+ 
+
+   
+
+  
+  
+    &.show {
+      max-height: 100rem;
+      opacity: 1;
+    }
+  }
+  
+  ::ng-deep .accordion {
+
+    :focus {
+        outline: 0 !important;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+      }
+      
+    .card {
+      margin: 10px auto !important;
+      border-bottom: 1px solid rgba(0, 0, 0, .04) !important;
+      background-color: #303030;
+      width: 43vw;
+      border-radius: 0;
+      
+
+
+      .btn-link {
+        font-weight: 400;
+        color: white;
+        font-size: 1.625rem;
+        text-decoration: none;
+        text-align: left;
+        justify-content: left;
+        
+ 
+       }   
+
+
+       // *** IMPORTANTE NON CAMBIARE BORDO ***** 
+       .btn{
+           border: 0;
+           padding: 0;
+
+       }
+    
+  
+      .card-header {
+       padding-top: 10;
+       
+        
+    
+  //   ******** IMPORTANTE NON CAMBIARE MAI IL PADDING BOTTONE **********
+        button {
+          padding: 0;
+          width: 100%;
+         
+          
+             
+            
+          span {
+            float: left;
+            font-size: 1.2rem;
+            
+          }
+        }
+      }
+  
+      .card-body {
+        padding: 1rem;
+        color: white;
+        font-size: 1.625rem;
+        font-weight: 300;
+        
+        
+      }
+
+      
+    }
+    
+  }
+
+  #faq-p-and-main-subscribe-container {
+      margin-top: 60px;
+  }
+
+  #faq-p-and-main-subscribe-container p {
+    text-align: center;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#faq-main-subscribe-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+
