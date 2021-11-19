@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainHomepageComponent } from './homepage/main-homepage/main-homepage.component';
 import { MainLoginComponent } from './login/main-login/main-login.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 import { ServiceComponent } from './homepage/service/service.component';
 import { ServiceContentComponent } from './homepage/service-content/service-content.component';
 import { ServiceMediaComponent } from './homepage/service-media/service-media.component';
@@ -19,11 +20,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './homepage/footer/footer.component';
 import { FaqComponent } from './homepage/faq/faq.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MainHomepageComponent,
     MainLoginComponent,
+    LoginFormComponent,
     ServiceComponent,
     ServiceContentComponent,
     ServiceMediaComponent,
