@@ -1,7 +1,7 @@
 .box {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 78vh;
-  width: 33vw;
+  height: auto;
+  width: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,14 +13,17 @@
   justify-items: center;
   align-items: center;
   width: 31vw;
-  height: 32vh;
+  height: auto;
 }
-
+.title{
+  width: 19rem;
+  padding-bottom: 1.5rem;
+}
 h2 {
-  position: relative;
-  right: 7rem;
-  padding: 1.5rem;
-  padding-top: 2rem;
+  // position: relative;
+  // right: 7rem;
+  // padding: 1.5rem;
+  // padding-top: 2rem;
   color: white;
 }
 
@@ -28,7 +31,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 23vw;
+  width: 19rem;
   height: 4vh;
   color: #737373;
 }
@@ -42,7 +45,7 @@ h2 {
 
   .inputbar {
     background-color: #333;
-    width: 21rem;
+    width: 19rem;
     height: 4rem;
     margin: -0.3rem;
     border: none;
@@ -52,7 +55,7 @@ h2 {
 
   button {
     background-color: #e50914;
-    width: 23vw;
+    width: 19rem;
     height: 3.5rem;
     border-radius: 4px;
     margin-top: 3rem;
@@ -64,10 +67,10 @@ h2 {
 }
 
 .bottom {
-  padding-top: 2.9rem;
+  // padding-top: 2.9rem;
   height: 23vh;
   color: #737373;
-  width: 23vw;
+  width: 19rem;
   display: flex;
   flex-direction: column;
   p {
