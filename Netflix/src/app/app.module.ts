@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { FooterComponent } from './homepage/footer/footer.component';
 import { FaqComponent } from './homepage/faq/faq.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FaqComponent } from './homepage/faq/faq.component';
   imports: [
     BrowserModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
