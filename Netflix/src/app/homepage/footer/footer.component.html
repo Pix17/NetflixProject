@@ -1,23 +1,23 @@
 <section >
-  <p id="Ptele-number" class="text-left">Domande? Chiama <a href="#">800-130-364</a></p>
-  <div class="d-flex">
+  <p id="Ptele-number" class="text-left pl-5">Domande? Chiama <a href="#">800-130-364</a></p>
+  <div class="d-flex justify-content-center">
     <ul>
-      <li *ngFor="let link of column1">
+      <li *ngFor="let link of col1">
         <a [href]="link.url">{{ link.label }}</a>
       </li>
     </ul>
     <ul>
-      <li *ngFor="let link of column2">
+      <li *ngFor="let link of col2">
         <a [href]="link.url">{{ link.label }}</a>
       </li>
     </ul>
     <ul>
-      <li *ngFor="let link of column3">
+      <li *ngFor="let link of col3">
         <a [href]="link.url">{{ link.label }}</a>
       </li>
     </ul>
     <ul>
-      <li *ngFor="let link of column4">
+      <li *ngFor="let link of col4">
         <a [href]="link.url">{{ link.label }}</a>
       </li>
     </ul>
