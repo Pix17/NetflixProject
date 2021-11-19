@@ -1,6 +1,8 @@
-<section >
-  <p id="Ptele-number" class="text-left pl-5">Domande? Chiama <a href="#">800-130-364</a></p>
-  <div class="d-flex justify-content-center">
+<section class="d-flex flex-column align-items-center">
+  <div class="w-50">
+    <p id="Ptele-number" class="text-left">Domande? Chiama <a href="#">800-130-364</a></p>
+  </div>
+  <div class="d-flex justify-content-evenly w-50">
     <ul>
       <li *ngFor="let link of col1">
         <a [href]="link.url">{{ link.label }}</a>
@@ -22,15 +24,10 @@
       </li>
     </ul>
   </div>
+  <div class="w-50">
+    <language-button></language-button>
+    <p><small>Netflix Italia</small></p>
+  </div>
 </section>
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
+
