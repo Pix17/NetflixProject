@@ -2,4 +2,10 @@ $bgcolor: #000;
 
 section{
     background-color: $bgcolor;
+    width: 100vw;
+    border-bottom: solid;
+    border-width: .5rem;
+}
+div{
+    max-width: 70vw;
 }
