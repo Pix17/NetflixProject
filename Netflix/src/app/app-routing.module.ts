@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainHomepageComponent } from './homepage/main-homepage/main-homepage.component';
-import { MainLoginComponent } from './login/main-login/main-login.component';
+
 
 const routes: Routes = [
   {
@@ -11,12 +10,12 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: MainHomepageComponent,
+    loadChildren: () =>
+      import('./modules/netflix/netflix.module').then(
+        (m) => m.NetflixModule
+      ),
   },
-  {
-    path: 'login',
-    component: MainLoginComponent,
-  },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
