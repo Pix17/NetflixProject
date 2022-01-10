@@ -8,10 +8,11 @@
         type="text"
         placeholder="Email o numero di telefono"
         class="inputbar"
+        [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
       />
       <br />
-      <input type="text" placeholder="Password" class="inputbar" />
-      <button>Accedi</button>
+      <input type="text" placeholder="Password" class="inputbar" [(ngModel)]="pass" [ngModelOptions]="{standalone: true}"/>
+      <button (click)="login()" routerLink="{{link}}">Accedi</button>
     </div>
     <div class="lowerform">
       <div class="chkbx">
