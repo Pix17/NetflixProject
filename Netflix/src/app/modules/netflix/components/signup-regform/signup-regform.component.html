@@ -1,0 +1,18 @@
+<section class="d-flex flex-column">
+    <p>Passaggio <b>1</b> di <b>3</b></p>
+  
+    <h2>Crea una password per</h2>
+    <h2>iniziare l'abbonamento</h2>
+    
+    <form action="#" class="d-flex flex-column">
+        <input type="text" id="email" placeholder="{{email}}" value="{{email}}" class="p-3 mb-2">
+        <input type="text" id="password" placeholder="Aggiungi una password" class="p-3" [(ngModel)]="pass" [ngModelOptions]="{standalone: true}">
+
+        <div>
+            <input type="checkbox" name="news" id="news" class="mr-2 mt-3">
+            <label for="news"> Si, invatemi email con le offerte speciali di Netflix.</label>
+        </div>
+
+        <button (click)="add()" class="bg-danger text-white p-3 border-0 mt-3 w-100">Continua</button>
+    </form>
+  </section>

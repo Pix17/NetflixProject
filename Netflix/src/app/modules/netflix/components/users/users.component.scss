@@ -1,0 +1,21 @@
+h1 {
+  font-size: 5rem;
+}
+.square {
+  width: 10rem;
+  height: 10rem;
+  border: none;
+  background-color: #5bc0de;
+}
+.h5 {
+  color: #5bc0de;
+}
+.crd:hover {
+  .square {
+    border: solid 3px #fff;
+  }
+
+  .h5 {
+    color: #fff;
+  }
+}

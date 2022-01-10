@@ -17,6 +17,14 @@ import { LanguageButtonComponent } from '@app/modules/netflix/components/languag
 import { FooterComponent } from '@app/modules/netflix/components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NetflixRoutingModule } from './netflix-routing.module';
+import { SignupComponent } from './pages/signup/signup.component';
+import { SignupFormComponent } from './components/signup-form/signup-form.component';
+import { FormsModule } from '@angular/forms';
+import { SignupRegformComponent } from './components/signup-regform/signup-regform.component';
+import { RegformComponent } from './pages/regform/regform.component';
+import { ProfilesGateComponent } from './pages/profiles-gate/profiles-gate.component';
+import { UsersComponent } from './components/users/users.component';
+import { BrowseComponent } from './pages/browse/browse.component';
 
 
 
@@ -36,8 +44,16 @@ import { NetflixRoutingModule } from './netflix-routing.module';
     ServiceMediaComponent,
     LanguageButtonComponent,
     FooterComponent,
+    SignupComponent,
+    SignupFormComponent,
+    SignupRegformComponent,
+    RegformComponent,
+    ProfilesGateComponent,
+    UsersComponent,
+    BrowseComponent,
   ],
   imports: [
+    FormsModule,
     CommonModule,
     NgbModule,
     FontAwesomeModule,

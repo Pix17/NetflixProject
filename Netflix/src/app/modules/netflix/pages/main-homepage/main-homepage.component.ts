@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ILink } from '@models/footer-interface';
 
 @Component({
-  selector: 'main-homepage',
   templateUrl: './main-homepage.component.html',
   styleUrls: ['./main-homepage.component.scss']
 })

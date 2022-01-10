@@ -1,8 +1,22 @@
 <form class="row">
-    <div>
-        <input type="email" class="form-control bottoni-main-subscribe" id="email" placeholder="Indirizzo email">
-    </div>
-    <div>
-        <button type="submit" class="btn btn-danger bottoni-main-subscribe" id="iscriviti">Inizia<fa-icon [icon]="faChevronRight" class="ml-2"></fa-icon></button>
-    </div>
+  <input
+    type="email"
+    class="form-control bottoni-main-subscribe"
+    id="email"
+    placeholder="Indirizzo email"
+    [(ngModel)]="email"
+    [ngModelOptions]="{ standalone: true }"
+    required
+  />
+
+
+  <button
+    type="submit"
+    (click)="signUp()"
+    class="btn btn-danger bottoni-main-subscribe"
+    id="iscriviti"
+    routerLink="signup"
+  >
+    Inizia<fa-icon [icon]="faChevronRight" class="ml-2"></fa-icon>
+  </button>
 </form>

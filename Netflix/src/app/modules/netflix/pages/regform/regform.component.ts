@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ILink } from '@models/footer-interface';
 
 @Component({
-  templateUrl: './main-login.component.html',
-  styleUrls: ['./main-login.component.scss']
+  templateUrl: './regform.component.html',
+  styleUrls: ['./regform.component.scss']
 })
-export class MainLoginComponent implements OnInit {
+export class RegformComponent implements OnInit {
+
+  constructor() { }
 
   column1: ILink[] = [
     {
@@ -15,7 +17,7 @@ export class MainLoginComponent implements OnInit {
     {
       label: 'Preferenze per i cookie',
       url: '#'
-    }
+    },
   ];
 
   column2: ILink[] = [
@@ -24,26 +26,26 @@ export class MainLoginComponent implements OnInit {
       url: '#'
     },
     {
-      label: "Informazioni sull'assistenza",
+      label: "Informazioni sull'azienda",
       url: '#'
-    }
+    },
   ];
 
   column3: ILink[] = [
     {
       label: 'Condizioni di utilizzo',
       url: '#'
-    }
+    },
   ];
 
   column4: ILink[] = [
     {
       label: 'Privacy',
       url: '#'
-    }
-  ]
+    },
 
-  constructor() { }
+  ]
+  
 
   ngOnInit(): void {
   }

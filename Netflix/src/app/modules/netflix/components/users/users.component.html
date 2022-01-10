@@ -1,0 +1,13 @@
+<section class="d-flex flex-column align-items-center">
+  <h1 class="text-white mb-3">Chi vuole guardare Netflix?</h1>
+  <div *ngIf="account" class="d-flex w-75 justify-content-between">
+    <div *ngFor="let item of account.users" class="user">
+      <div class=" d-flex flex-column text-center crd">
+        <button class="square text-center" routerLink="../Browse" (click)=choseUser(item)>{{ item[0] }}</button>
+        <span class="h5">
+          {{ item }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

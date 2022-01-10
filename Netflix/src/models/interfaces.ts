@@ -4,3 +4,9 @@ export interface IService {
   media: string;
   video?: string;
 }
+
+export interface IAccount {
+  email:string,
+  pass:string,
+  users?:string[]
+}
