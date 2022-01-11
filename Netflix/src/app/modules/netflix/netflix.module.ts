@@ -25,6 +25,8 @@ import { RegformComponent } from './pages/regform/regform.component';
 import { ProfilesGateComponent } from './pages/profiles-gate/profiles-gate.component';
 import { UsersComponent } from './components/users/users.component';
 import { BrowseComponent } from './pages/browse/browse.component';
+import { UsHeaderComponent } from './components/us-header/us-header.component';
+import { UsMainComponent } from './components/us-main/us-main.component';
 
 
 
@@ -51,6 +53,8 @@ import { BrowseComponent } from './pages/browse/browse.component';
     ProfilesGateComponent,
     UsersComponent,
     BrowseComponent,
+    UsHeaderComponent,
+    UsMainComponent,
   ],
   imports: [
     FormsModule,

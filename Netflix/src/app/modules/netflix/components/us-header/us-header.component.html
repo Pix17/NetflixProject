@@ -1,0 +1,13 @@
+<section class="d-flex justify-content-between">
+    <div>
+        <logo></logo>
+        <a href="">Home</a>
+        <a href="">Serie TV</a>
+        <a href="">Film</a>
+        <a href="">Nuovi e popolari</a>
+        <a href="">La mia lista</a>
+    </div>
+    <div *ngIf="user">
+       <img src="{{user.img}}" alt="user logo">
+    </div>
+</section>

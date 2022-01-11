@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { SignupService } from '../../services/signup.service';
 

@@ -5,8 +5,13 @@ export interface IService {
   video?: string;
 }
 
+export interface IUser {
+  user:string,
+  img:string
+}
+
 export interface IAccount {
   email:string,
   pass:string,
-  users?:string[]
+  users?:IUser[]
 }
