@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit {
   account!:IAccount;
 
 
-  constructor(private signup:AccountLoginService) { }
+  constructor() { }
 
   ngOnInit(): void {
     // this.account = this.signup.accountChosen;
@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
   }
 
   choseUser(user:IUser){
-    this.signup.user = user
+    localStorage.setItem('user',JSON.stringify(user))
   }
 
 }

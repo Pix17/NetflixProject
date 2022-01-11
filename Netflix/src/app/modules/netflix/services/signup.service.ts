@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { IAccount } from '@models/interfaces';
 
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from '@models/interfaces';
-import { AccountLoginService } from '../../services/account-login.service';
 
 @Component({
   templateUrl: './browse.component.html',
@@ -9,10 +8,10 @@ import { AccountLoginService } from '../../services/account-login.service';
 export class BrowseComponent implements OnInit {
   user!: IUser;
 
-  constructor(private account:AccountLoginService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.user = this.account.user;
+    this.user = JSON.parse(''+localStorage.getItem('user'));
   }
 
 }
