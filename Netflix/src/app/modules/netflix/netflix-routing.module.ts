@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainHomepageComponent } from '@app/modules/netflix/pages/main-homepage/main-homepage.component';
 import { MainLoginComponent } from '@app/modules/netflix/pages/main-login/main-login.component';
+import { AddUserComponent } from './pages/add-user/add-user.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { ProfilesGateComponent } from './pages/profiles-gate/profiles-gate.component';
 import { ProjectComponent } from './pages/project.components';
@@ -20,6 +21,7 @@ const routes: Routes = [
           { path: 'regform', component: RegformComponent },
           { path: 'ProfilesGate', component: ProfilesGateComponent },
           { path: 'Browse', component: BrowseComponent },
+          { path: 'Add-User', component: AddUserComponent },
 
         ],
       },

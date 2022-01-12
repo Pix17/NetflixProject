@@ -1,6 +1,7 @@
-<section>
-  <us-header [user]="user"></us-header>
-  <us-main></us-main>
-
+<section class="vw-100 vh-100 d-flex flex-column justify-content-between bg-dark">
+  <us-header [user]="user" [account]="account"></us-header>
+  <us-carousel [list]="popular" [name]="'Most popular'"></us-carousel>
+  <us-carousel [list]="tvSeries" [name]="user.user+', continua a guardare:'"></us-carousel>
+  <us-carousel [list]="preferred" [name]="'Preferiti da '+user.user"></us-carousel>
   <footer></footer>
 </section>

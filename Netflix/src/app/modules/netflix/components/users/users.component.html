@@ -1,12 +1,19 @@
 <section class="d-flex flex-column align-items-center">
   <h1 class="text-white mb-3">Chi vuole guardare Netflix?</h1>
-  <div *ngIf="account" class="d-flex w-75 justify-content-between">
-    <div *ngFor="let item of account.users" class="user">
+  <div *ngIf="account" class="d-flex w-75 justify-content-center">
+    
+    <div *ngFor="let item of account.users" class="user mr-5">
       <div class=" d-flex flex-column text-center crd">
         <img src="{{item.img}}" alt="img logo" class="square text-center" routerLink="../Browse" (click)=choseUser(item)/>
-
         <span class="h5">
           {{ item.user }}
+        </span>
+      </div>
+    </div>
+    <div *ngIf="maxUsers != 5">
+      <div class=" d-flex flex-column text-center">
+        <img src="https://image.shutterstock.com/image-vector/add-create-profile-photo-icon-260nw-2023504886.jpg" alt="img s" class="square text-center" routerLink="../Add-User"/>
+        <span class="h5">Add user
         </span>
       </div>
     </div>

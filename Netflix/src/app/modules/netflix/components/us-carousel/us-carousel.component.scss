@@ -1,0 +1,38 @@
+.contain {
+  width: 100%;
+}
+.row {
+  overflow: scroll;
+  width: 100%;
+}
+.row__inner {
+  -webkit-transition: 450ms -webkit-transform;
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 2rem 0;
+  padding-bottom: 10px;
+}
+
+.tile {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 450ms all;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+}
+
+.row__inner:hover .tile:hover {
+  -webkit-transform: scale(1.2) translateX(-10%);
+  transform: scale(1.2) translateX(-10%);
+  opacity: 1;
+  z-index: 1;
+}
+

@@ -6,12 +6,23 @@ export interface IService {
 }
 
 export interface IUser {
-  user:string,
-  img:string
+  user: string;
+  img: string;
 }
 
 export interface IAccount {
-  email:string,
-  pass:string,
-  users?:IUser[]
+  email: string;
+  pass: string;
+  users?: IUser[];
+}
+
+export enum type {
+  movie = 'movie/',
+  tv = 'tv/',
+}
+
+export enum listedBy {
+  popular = 'popular',
+  top_rated = 'top_rated',
+  now_playing = 'now_playing',
 }

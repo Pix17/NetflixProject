@@ -10,6 +10,7 @@ import { AccountLoginService } from '../../services/account-login.service';
 export class UsersComponent implements OnInit {
 
   account!:IAccount;
+  maxUsers?:number;
 
 
   constructor() { }
@@ -17,6 +18,7 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
     // this.account = this.signup.accountChosen;
     this.account = JSON.parse(""+localStorage.getItem('account'));
+    this.maxUsers = this.account.users?.length;
   }
 
   choseUser(user:IUser){

@@ -16,9 +16,9 @@ export class AccountLoginService {
       {user:'Riccardo', img:'https://i.pinimg.com/170x/1a/8a/9a/1a8a9a4aa9747d11493cf12551a62884.jpg'}]}
   ];
 
-  public addAccount(email:string, pass:string, users:IUser[]=[{user:'Main', img:'link'}]){
+  public addAccount(email:string, pass:string, users:IUser[]=[{user:'Main', img:'https://i.pinimg.com/236x/97/7f/e7/977fe798cf2c3a037e7aa9af6ce4b9d1.jpg'}]){
     this.account.push(
-      {email,pass}
+      {email,pass, users}
     )
   }
 

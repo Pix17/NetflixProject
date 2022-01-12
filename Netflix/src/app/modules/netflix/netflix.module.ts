@@ -19,14 +19,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NetflixRoutingModule } from './netflix-routing.module';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { SignupRegformComponent } from './components/signup-regform/signup-regform.component';
 import { RegformComponent } from './pages/regform/regform.component';
 import { ProfilesGateComponent } from './pages/profiles-gate/profiles-gate.component';
 import { UsersComponent } from './components/users/users.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { UsHeaderComponent } from './components/us-header/us-header.component';
-import { UsMainComponent } from './components/us-main/us-main.component';
+import { UsCarouselComponent } from './components/us-carousel/us-carousel.component';
+import { AddUserComponent } from './pages/add-user/add-user.component';
+import { UsAddUserComponent } from './components/us-add-user/us-add-user.component';
 
 
 
@@ -54,14 +56,17 @@ import { UsMainComponent } from './components/us-main/us-main.component';
     UsersComponent,
     BrowseComponent,
     UsHeaderComponent,
-    UsMainComponent,
+    UsCarouselComponent,
+    AddUserComponent,
+    UsAddUserComponent,
   ],
   imports: [
-    FormsModule,
     CommonModule,
     NgbModule,
     FontAwesomeModule,
-    NetflixRoutingModule
+    NetflixRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class NetflixModule { }
