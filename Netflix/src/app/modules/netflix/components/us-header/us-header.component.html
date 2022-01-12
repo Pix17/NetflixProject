@@ -1,13 +1,34 @@
-<section class="d-flex justify-content-between">
-    <div>
-        <logo></logo>
-        <a href="">Home</a>
-        <a href="">Serie TV</a>
-        <a href="">Film</a>
-        <a href="">Nuovi e popolari</a>
-        <a href="">La mia lista</a>
+<section class="d-flex justify-content-between px-5 py-3 bg-dark">
+  <div class="d-flex justify-content-between align-items-center w-50">
+    <logo></logo>
+    <a href="">Home</a>
+    <a href="">Serie TV</a>
+    <a href="">Film</a>
+    <a href="">Nuovi e popolari</a>
+    <a href="">La mia lista</a>
+  </div>
+  <div *ngIf="user" class="w-25 d-flex justify-content-end align-items-center">
+    <fa-icon [icon]="faSearch" class="text-white"></fa-icon>
+    <fa-icon [icon]="faBell" class="text-white ml-4"></fa-icon>
+
+    <div ngbDropdown class="ml-4">
+      <img src="{{ user.img }}" alt="user logo" ngbDropdownToggle />
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dDMenu">
+        <div *ngFor="let item of account.users" ngbDropdownItem>
+          <div *ngIf="item.user != user.user" (click)="choseUser(item)">
+            <img src="{{ item.img }}" alt="user img" />
+            <span class="text-white m-1">
+              {{ item.user }}
+            </span>
+          </div>
+        </div>
+        <span ngbDropdownItem class="text-white m-1 border-bottom border-dark"
+          >Gestisci i profili</span
+        >
+        <span ngbDropdownItem class="text-white m-1">Account</span>
+        <span ngbDropdownItem class="text-white m-1">Centro assistenza</span>
+        <span ngbDropdownItem class="text-white m-1">Esci da Netflix</span>
+      </div>
     </div>
-    <div *ngIf="user">
-       <img src="{{user.img}}" alt="user logo">
-    </div>
+  </div>
 </section>

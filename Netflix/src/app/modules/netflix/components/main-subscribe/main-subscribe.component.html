@@ -1,20 +1,45 @@
-<form class="row">
-  <input
-    type="email"
-    class="form-control bottoni-main-subscribe"
-    id="email"
-    placeholder="Indirizzo email"
-    [(ngModel)]="email"
-    [ngModelOptions]="{ standalone: true }"
-  />
+<form (ngSubmit)="signUp( userRegistrationForm.get('email')?.valid )" [formGroup]="userRegistrationForm">
+  <div class="form-group row">
+    <div class="form-group">
+      <input
+      placeholder="email"
+        type="email"
+        id="email"
+        [class.is-invalid]="
+          userRegistrationForm.get('email')?.invalid &&
+          userRegistrationForm.get('email')?.touched
+        "
+        class="form-control bottoni-main-subscribe"
+        formControlName="email"
+        [(ngModel)]="email"
+      />
+      <div
+        *ngIf="
+          (userRegistrationForm.get('email')?.invalid &&
+            userRegistrationForm.get('email')?.touched) ||
+          userRegistrationForm.get('email')?.dirty
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="userRegistrationForm.get('email')?.errors?.required"
+          >Email address is required</small
+        >
+        <small
+          class="text-danger"
+          *ngIf="userRegistrationForm.get('email')?.errors?.email"
+          >Email address is invalid</small
+        >
+      </div>
+    </div>
 
-  <button
-  type="submit"
-  (click)="signUp()"
-  class="btn btn-danger bottoni-main-subscribe"
-  id="iscriviti"
-  routerLink="signup"
-  >
-    Inizia<fa-icon [icon]="faChevronRight" class="ml-2"></fa-icon>
-  </button>
+    <button
+      type="submit"
+      class="btn btn-danger bottoni-main-subscribe"
+      id="iscriviti"
+      routerLink="{{link}}"
+    >
+      Inizia<fa-icon [icon]="faChevronRight" class="ml-2"></fa-icon>
+    </button>
+  </div>
 </form>

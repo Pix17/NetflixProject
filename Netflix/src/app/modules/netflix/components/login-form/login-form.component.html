@@ -1,18 +1,25 @@
 <div class="box">
-  <div class="form">
+  <form>
     <div class="title">
       <h2>Accedi</h2>
     </div>
     <div class="upperform">
       <input
-        type="text"
-        placeholder="Email o numero di telefono"
+        type="email"
+        placeholder="{{email}}"
         class="inputbar"
-        [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+        [(ngModel)]="email"
+        [ngModelOptions]="{ standalone: true }"
       />
       <br />
-      <input type="text" placeholder="Password" class="inputbar" [(ngModel)]="pass" [ngModelOptions]="{standalone: true}"/>
-      <button (click)="login()" routerLink="{{link}}">Accedi</button>
+      <input
+        type="text"
+        placeholder="Password"
+        class="inputbar"
+        [(ngModel)]="pass"
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <button (click)="login()" routerLink="{{ link }}">Accedi</button>
     </div>
     <div class="lowerform">
       <div class="chkbx">
@@ -22,7 +29,7 @@
 
       <a class="whitelinks" href="#">Serve aiuto?</a>
     </div>
-  </div>
+  </form>
   <div class="bottom">
     <div class="fbline">
       <img

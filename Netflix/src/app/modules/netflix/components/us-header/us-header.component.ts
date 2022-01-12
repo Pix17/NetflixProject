@@ -1,17 +1,25 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IUser } from '@models/interfaces';
+import { IAccount, IUser } from '@models/interfaces';
+import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'us-header',
   templateUrl: './us-header.component.html',
-  styleUrls: ['./us-header.component.scss']
+  styleUrls: ['./us-header.component.scss'],
 })
 export class UsHeaderComponent implements OnInit {
+  faSearch = faSearch;
+  faBell = faBell;
 
-  @Input() user!:IUser;
-  constructor() { }
+  @Input() user!: IUser;
+  @Input() account!: IAccount;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  choseUser(user:IUser){
+    localStorage.setItem('user',JSON.stringify(user))
+    location.reload();
   }
-
 }

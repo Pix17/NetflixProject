@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { SignupService } from '../../services/signup.service';
 
@@ -10,12 +10,24 @@ import { SignupService } from '../../services/signup.service';
 })
 export class MainSubscribeComponent implements OnInit {
   faChevronRight = faChevronRight;
-  email!: string;
-  constructor(private signup: SignupService) {}
+  email: string = this.signup.email;
 
-  ngOnInit(): void {}
+  link!: string;
 
-  signUp() {
-    this.signup.email = this.email;
+  userRegistrationForm!: FormGroup;
+
+  constructor(private signup: SignupService, private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.userRegistrationForm = this.fb.group({
+      email: ['', Validators.email],
+    });
+  }
+
+  signUp(validationMail: boolean | undefined) {
+    if (validationMail && this.email) {
+      this.link = 'signup';
+      this.signup.email = this.email;
+    }
   }
 }

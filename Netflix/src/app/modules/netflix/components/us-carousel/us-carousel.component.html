@@ -1,0 +1,17 @@
+
+<div *ngIf="list">
+  <!-- {{ popularList[0] | json }} -->
+  <div class="contain">
+    <h1 class="text-white">{{name}}</h1>
+    <div class="row">
+      <div class="row__inner">
+        <div class="tile" *ngFor="let elem of list">
+          <img
+            src="https://image.tmdb.org/t/p/w500{{ elem.backdrop_path }}"
+            alt="backdrop_img"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
