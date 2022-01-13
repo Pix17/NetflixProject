@@ -23,18 +23,19 @@ export class LoginFormComponent implements OnInit {
     }else{
       this.email = 'Inserisci la tua email'
     }
+    this.account.addDefault();
   }
 
   login() {
-    console.log(this.email +" "+ this.pass);
+    // console.log(this.email +" "+ this.pass);
     
     const item = this.account.findAccount(this.email, this.pass);
+    
     if (item) {
-      console.log();
-      
+      console.log('item '+ item);
+      localStorage.setItem('accountChosen',JSON.stringify(item))
       this.link = '../ProfilesGate';
-      localStorage.setItem('account', JSON.stringify(item));
-      this.account.accountChosen = item;
+      // this.account.accountChosen = item;
     }
   }
 }

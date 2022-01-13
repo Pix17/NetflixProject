@@ -19,9 +19,13 @@ export class ApiCallService {
 
   getApiFiga() {
     return forkJoin({
-      popular: this.getApi(type.movie, listedBy.popular),
-      preferred: this.getApi(type.movie, listedBy.top_rated),
-      tvSeries: this.getApi(type.tv, listedBy.top_rated),
+      popularMovie: this.getApi(type.movie, listedBy.popular),
+      topRatedMovie: this.getApi(type.movie, listedBy.top_rated),
+      upComingMovie: this.getApi(type.movie, listedBy.upcoming),
+
+      popularSeries: this.getApi(type.tv, listedBy.popular),
+      topRatedSeries: this.getApi(type.tv, listedBy.top_rated),
+      onAirSeries: this.getApi(type.tv, listedBy.on_the_air),
     });
   }
 }

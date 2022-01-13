@@ -24,5 +24,8 @@ export enum type {
 export enum listedBy {
   popular = 'popular',
   top_rated = 'top_rated',
+  latest = 'latest',
+  upcoming = 'upcoming',
   now_playing = 'now_playing',
+  on_the_air='on_the_air'
 }
