@@ -5,5 +5,11 @@
     background-color: rgb(240, 19, 19);
 }
 img[alt="img_user"]{
-    width: 30%;
+    width: 15rem;
+    width: 15rem;
+    object-fit: cover;
+}
+
+img[alt="img_modal"]{
+    width: 100%;
 }
