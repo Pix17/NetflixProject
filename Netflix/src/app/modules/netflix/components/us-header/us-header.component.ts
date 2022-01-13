@@ -22,4 +22,8 @@ export class UsHeaderComponent implements OnInit {
     localStorage.setItem('user',JSON.stringify(user))
     location.reload();
   }
+
+  logOut(){
+    localStorage.setItem('accountChosen','');
+  }
 }

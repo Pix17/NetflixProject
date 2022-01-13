@@ -23,11 +23,12 @@
           </div>
         </div>
         <span ngbDropdownItem class="text-white m-1 border-bottom border-dark"
+        routerLink="../ProfilesGate"
           >Gestisci i profili</span
         >
         <span ngbDropdownItem class="text-white m-1">Account</span>
         <span ngbDropdownItem class="text-white m-1">Centro assistenza</span>
-        <span ngbDropdownItem class="text-white m-1">Esci da Netflix</span>
+        <span ngbDropdownItem class="text-white m-1" (click)="logOut()" routerLink="../login">Esci da Netflix</span>
       </div>
     </div>
   </div>
