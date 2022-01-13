@@ -16,8 +16,7 @@ export class UsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // this.account = this.signup.accountChosen;
-    this.account = JSON.parse(""+localStorage.getItem('account'));
+    this.account = JSON.parse(''+localStorage.getItem('accountChosen'));
     this.maxUsers = this.account.users?.length;
   }
 

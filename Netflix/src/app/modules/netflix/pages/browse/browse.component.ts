@@ -23,7 +23,7 @@ export class BrowseComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = JSON.parse('' + localStorage.getItem('user'));
-    this.account = JSON.parse('' + localStorage.getItem('account'));
+    this.account = JSON.parse('' + localStorage.getItem('accountChosen'));
 
     this.api.getApiFiga().subscribe((response) => {
       this.popularMovie = response.popularMovie.results;
