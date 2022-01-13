@@ -3,12 +3,33 @@
     <h3>Aggiungi un profilo per un'altra persona che guarda netflix</h3>
     <form action="post">
         <div class="w-100 d-flex p-5 align-items-center justify-content-between">
-            <img src="https://image.shutterstock.com/image-vector/add-create-profile-photo-icon-260nw-2023504886.jpg" alt="img_user">
+            <img src="{{defImg}}" alt="img_user" (click)="open(mymodal)">
             <input type="text" placeholder="Nome utente" class="bg-info border-0 p-2 w-50" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }">
         </div>
         <div class="d-flex w-100 justify-content-center m-5">
-            <button id="continua" class="p-3 w-25 border-0 mx-5" (click)="addUser()" routerLink="../ProfilesGate">Continua</button>
-            <button id="annulla" class="p-3 w-25 border-0 mx-5">Annulla</button>
+            <button id="continua" class="p-3 w-25 border-0 rounded-pill mx-5" (click)="addUser()" routerLink="../ProfilesGate">Continua</button>
+            <button id="annulla" class="p-3 w-25 border-0 rounded-pill mx-5">Annulla</button>
         </div>
     </form>
 </section>
+
+   
+   
+<ng-template #mymodal let-modal>
+    <div class="bg-info">
+
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h4 >Ciao {{username}}!</h4>
+            <h5 >Seleziona la tua nuova immagine di profilo!</h5>
+        </div>
+        
+        <div class="d-flex flex-wrap p-0">
+            <div *ngFor="let imgn of imgList" class="w-50 p-1">
+                <img [src]="imgn" alt="img_modal" (click)="imgChose(imgn)" (click)="modal.dismiss('Cross click')">
+            </div>
+        </div>
+    </div>
+
+</ng-template>
+
+
