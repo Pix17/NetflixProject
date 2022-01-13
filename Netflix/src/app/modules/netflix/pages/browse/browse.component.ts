@@ -10,9 +10,14 @@ export class BrowseComponent implements OnInit {
   user!: IUser;
   account!: IAccount;
 
-  popular: any;
-  preferred: any;
-  tvSeries: any;
+  popularMovie: any;
+  preferredMovie: any;
+  popularSeries: any;
+  latestMovie: any;
+  upComingMovie: any;
+  topRatedSeries: any;
+  latestSeries: any;
+  onAirSeries: any;
 
   constructor(private readonly api: ApiCallService) {}
 
@@ -20,25 +25,14 @@ export class BrowseComponent implements OnInit {
     this.user = JSON.parse('' + localStorage.getItem('user'));
     this.account = JSON.parse('' + localStorage.getItem('account'));
 
-    // this.api
-    //   .getApi(type.movie, listedBy.popular)
-    //   .subscribe((response) => (this.popular = response.results));
+    this.api.getApiFiga().subscribe((response) => {
+      this.popularMovie = response.popularMovie.results;
+      this.preferredMovie = response.topRatedMovie.results;
+      this.upComingMovie = response.upComingMovie.results;
 
-    // this.api
-    //   .getApi(type.movie, listedBy.top_rated)
-    //   .subscribe((response) => (this.preferred = response.results));
-
-      // this.api
-      // .getApi(type.tv, listedBy.popular)
-      // .subscribe((response) => (this.tvSeries = response.results));
-
-      this.api.getApiFiga().subscribe((response) => {
-        this.popular = response.popular.results
-        this.preferred = response.preferred.results
-        this.tvSeries = response.tvSeries.results
-      });
-      
+      this.topRatedSeries = response.topRatedSeries.results;
+      this.onAirSeries = response.onAirSeries.results;
+      this.popularSeries = response.popularSeries.results;
+    });
   }
-  
-
 }

@@ -1,7 +1,13 @@
-<section class="vw-100 vh-100 d-flex flex-column justify-content-between bg-dark">
+<section class="vw-100 d-flex flex-column justify-content-between">
   <us-header [user]="user" [account]="account"></us-header>
-  <us-carousel [list]="popular" [name]="'Most popular'"></us-carousel>
-  <us-carousel [list]="tvSeries" [name]="user.user+', continua a guardare:'"></us-carousel>
-  <us-carousel [list]="preferred" [name]="'Preferiti da '+user.user"></us-carousel>
+
+  <us-carousel [list]="popularMovie" [name]="'Di tendenza:'"></us-carousel>
+  <us-carousel [list]="preferredMovie" [name]="'Preferiti da '+user.user+':'"></us-carousel>
+  <us-carousel [list]="popularSeries" [name]="user.user+', continua a guardare:'"></us-carousel>
+
+  <us-carousel [list]="topRatedSeries" [name]="'Serie Tv più amate:'"></us-carousel>
+  <us-carousel [list]="onAirSeries" [name]="'On Air:'"></us-carousel>
+  <us-carousel [list]="upComingMovie" [name]="'Presto al cinema!'"></us-carousel>
+
   <footer></footer>
 </section>

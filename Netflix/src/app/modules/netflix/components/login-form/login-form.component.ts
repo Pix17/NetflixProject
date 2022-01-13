@@ -26,7 +26,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   login() {
-    console.log(this.email +" "+ this.pass);
+    // console.log(this.email +" "+ this.pass);
     
     const item = this.account.findAccount(this.email, this.pass);
     if (item) {
