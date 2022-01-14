@@ -1,17 +1,39 @@
-
 <div *ngIf="list">
-  <!-- {{ popularList[0] | json }} -->
-  <div class="contain">
+  <div class="contain position-relative">
+
     <h1 class="text-white">{{name}}</h1>
-    <div class="row">
-      <div class="row__inner">
+
+    <a (click)="scrollLeft()" class="btn btn-dark position-absolute d-flex justify-content-center align-items-center" id="scroll-left"><fa-icon [icon]="faChevronLeft"></fa-icon></a>
+    <a (click)="scrollRight()" class="btn btn-dark position-absolute d-flex justify-content-center align-items-center" id="scroll-right"><fa-icon [icon]="faChevronRight"></fa-icon></a>
+
+    <div #row class="row">
+      <div #carousel class="row__inner">
+
         <div class="tile" *ngFor="let elem of list">
-          <img
-            src="https://image.tmdb.org/t/p/w500{{ elem.backdrop_path }}"
-            alt="backdrop_img"
-          />
+          <img src="https://image.tmdb.org/t/p/w500{{ elem.backdrop_path }}" alt="backdrop_img" />
+
+          <div class='edit_hover_class d-flex flex-column'>
+            <div class="d-flex">
+              <a href='#' class="btn-light d-flex justify-content-center align-items-center">
+                <fa-icon [icon]="faPlay"></fa-icon>
+              </a>
+              <a href='#' class="btn-dark d-flex justify-content-center align-items-center">
+                <fa-icon [icon]="faPlus"></fa-icon>
+              </a>
+              <a href='#' class="btn-dark d-flex justify-content-center align-items-center">
+                <fa-icon [icon]="faThumbsUp"></fa-icon>
+              </a>
+              <a href='#' class="btn-dark d-flex justify-content-center align-items-center">
+                <fa-icon [icon]="faThumbsDown"></fa-icon>
+              </a>
+            </div>
+            <p class="font-weight-medium">{{elem.title}} {{elem.name}}</p>
+          </div>
+
         </div>
       </div>
+
     </div>
   </div>
+
 </div>

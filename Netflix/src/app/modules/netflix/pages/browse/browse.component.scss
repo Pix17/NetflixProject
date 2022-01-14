@@ -1,3 +1,59 @@
-section{
-    background-color: #000;
+section {
+  background-color: #000;
+}
+
+.above-the-fold {
+  position: relative;
+  height: 80vh;
+  background-color: black;
+  margin-bottom: 50px;
+}
+
+
+#background-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+p {
+  max-width: 600px;
+  font-size: 1.4rem;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 120px;
+  left: 100px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 175px;
+  height: 60px;
+}
+
+.btn-dark {
+  background-color: rgba(0, 0, 0, 0.411);
+  border: none;
+}
+
+.btn-light {
+  margin-right: 20px;
+}
+
+.btn-info {
+  background-color: transparent;
+}
+
+.btn-dark > a {
+  margin: 5px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  width: 40px;
+  height: auto;
+  display: inline-block;
 }
