@@ -1,6 +1,28 @@
 <section class="vw-100 d-flex flex-column justify-content-between">
   <us-header [user]="user" [account]="account"></us-header>
 
+  <div class="above-the-fold">
+
+    <video id="background-video" autoplay loop muted >
+      <source src="https://video.comingsoon.it/MP4/37604.mp4" type="video/mp4">
+    </video>
+
+    <div class="buttons">
+      <h1 class="text-light font-weight-bold">{{popularMovie[2].title}}</h1>
+      <p class="text-light font-weight-bold">{{popularMovie[2].overview}}</p>
+      <a href='#' class="btn btn-light font-weight-bold p-3">
+        <fa-icon [icon]="faPlay"></fa-icon>
+        Riproduci
+      </a>
+      <a href='#' class="btn btn-dark font-weight-bold">
+        <a href="#" class="btn btn-info">
+          <fa-icon [icon]="faInfo"></fa-icon>
+        </a>
+        Altre info
+      </a>
+    </div>
+  </div>
+
   <us-carousel [list]="popularMovie" [name]="'Di tendenza:'"></us-carousel>
   <us-carousel [list]="preferredMovie" [name]="'Preferiti da '+user.user+':'"></us-carousel>
   <us-carousel [list]="popularSeries" [name]="user.user+', continua a guardare:'"></us-carousel>

@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+import { faInfo, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from '@angular/core';
 import { IAccount, IUser, listedBy, type } from '@models/interfaces';
 import { ApiCallService } from '../../services/api-call.service';
@@ -10,6 +12,9 @@ export class BrowseComponent implements OnInit {
   user!: IUser;
   account!: IAccount;
 
+  faPlay = faPlay;
+  faInfo = faInfo;
+
   popularMovie: any;
   preferredMovie: any;
   popularSeries: any;
@@ -18,6 +23,8 @@ export class BrowseComponent implements OnInit {
   topRatedSeries: any;
   latestSeries: any;
   onAirSeries: any;
+
+  environment = environment;
 
   constructor(private readonly api: ApiCallService) {}
 
